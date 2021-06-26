@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Raleway:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-image: url("images/composition-with-pasta-and-tomatoes.jpg");
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  color: white;
+}
+
+h1 {
+  font-family: "Parisienne", cursive;
+  color: #e1b13b;
+  font-size: 7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.container{
+  max-width: 1140px;
+  margin-left: 350px;
+}
+
+.btn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  margin: 7rem auto;
+  padding: 0 25rem;
+}
+
+.btn-redirect{
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  padding: 1rem ;
+  border: 0.125rem solid #e1b13b;
+  color: white;
+  background: unset; 
+  text-transform: uppercase;
+  transition: 0.5s all ease;
+  width: 200px;
+}
+
+.btn-redirect:hover, .btn-redirect:active, .btn-redirect:focus{
+  border: 0.125rem solid dimgray;
+  color:#e1b13b;
+  box-shadow: 0 0.5rem 0.5rem #e1b13b;
+}
+
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 5rem; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}

@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Raleway:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background-color: #131315;
+}
+
+h1 {
+  font-family: "Parisienne", cursive;
+  color: #e1b13b;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+h2{
+  font-family: "Raleway", sans-serif;
+  font-weight: unset;
+  font-size: 2rem;
+  color: #e1b13b;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero {
+  height: 15vh;
+  width: 100vw;
+  background-image: url("images/fundo.jpg");
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+}
+
+.btn-menu, .btn-pagina{
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-left: 3rem;
+}
+
+.btn-menu{
+  color: white;
+}
+
+.btn-pagina{
+  color: #e1b13b;
+}
+
+.container-cardapio{
+  display: grid;
+  grid-template-columns: auto;
+  place-items: center;
+}
+
+.cardapio{
+  display: grid;
+  grid-template-columns: auto;
+  place-items: center;
+}
+
+.cardapio li{
+  display: block;
+}
+
+.cardapio-lista{
+  list-style-type: none;
+
+}
+
+.cardapio-prato{
+  list-style-type: none;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #e1b13b;
+}
+
+.cardapio-item{
+  list-style-type: none;
+  display: block;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 600px;
+}
+
+.cardapio-lista img{
+  width: 600px;
+  height: auto;
+  
+}
+
+label{
+  font-size: 1.5rem;
+}
+
+input{
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 22rem;
+  padding: 1rem;
+}
+
+#saladaAntipasto{
+  margin-bottom: 35rem;
+}
+
+#saladaEspecial{
+  margin-bottom: 37rem;
+}
+
+#file{
+  margin-bottom: 38rem;
+}
+
+#lasanha{
+  margin-bottom: 41rem;
+}
+
+#spaghetti{
+  margin-bottom: 35rem;
+}
+
+#risotoOssobuco{
+  margin-bottom: 62rem;
+}
+
+#risotoBacalhau{
+  margin-bottom: 50rem;
+}
+
+#agua{
+  margin-bottom: 64rem;
+}
+
+#vinho{
+  margin-bottom: 35rem;
+}
+
+#suco{
+  margin-bottom: 3rem;
+}
+
+.btn-pedido{
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  padding: 1rem ;
+  border: 0.125rem solid #e1b13b;
+  color: white;
+  background: unset; 
+  text-transform: uppercase;
+  transition: 0.5s all ease;
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.btn-pedido:hover, .btn-pedido:active, .btn-pedido:focus{
+  border: 0.125rem solid dimgray;
+  color:#e1b13b;
+  box-shadow: 0 0.5rem 0.5rem #e1b13b;
+}
+
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding-right: 0.5rem;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}

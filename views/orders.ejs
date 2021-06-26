@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RESTAURANT ORDERS</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../public/style-orders.css">
+</head>
+
+<body>
+  <div class="hero"></div>
+  <h1> Restaurante Italian Pasta</h1>
+  <div class="container">
+    <div class="container-btn">
+      <form action="/cardapio" method="POST">
+        <button type="submit" class="btn-menu"><span class="material-icons">
+            restaurant_menu
+          </span>Cardápio</button>
+      </form>
+      <form action="/pedidos" method="POST">
+        <button type="submit" class="btn-pagina"><span class="material-icons">
+            shopping_cart
+          </span>Pedidos</button>
+      </form>
+      <form action="/voltar" method="POST">
+        <button type="submit" class="btn-menu"><span class="material-icons">
+            home
+          </span>Voltar</button>
+      </form>
+    </div>
+    <div class="container-pedidos">
+      <h2> Pedidos </h2>
+      <ul class="orders">
+        <% for(let i=0; i < orders.length; i++) {%>
+          <hr>
+          <li class="orders-mesa">
+            Mesa: <%= orders[i].mesa %>
+          </li>
+          <% for(let j=0; j < orders[i].prato.length; j++) {%>
+            <li class="orders-lista">
+              Prato: <%= orders[i].prato[j] %>
+            </li>
+            <li class="orders-lista">
+              Preço: <%= orders[i].preco[j] %>
+            </li>
+            <li class="orders-qtd">
+              Quantidade: <%= orders[i].quantidade[j] %>
+            </li>
+            <% } %>
+              <li class="orders-total">
+                Total Mesa: <%= orders[i].totalMesa %>
+              </li>
+              <hr>
+              <% } %>
+      </ul>
+      <br><br>
+    </div>
+    <div></div>
+  </div>
+  <div class="hero"></div>
+
+</body>
+
+</html>

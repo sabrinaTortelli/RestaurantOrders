@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RESTAURANT ORDERS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../public/style-menu.css">
+
+</head>
+
+<body>
+    <div class="hero"></div>
+    <h1> Restaurante Italian Pasta</h1>
+    <div class="container">
+        <div class="container-btn">
+            <form action="/cardapio" method="POST">
+                <button type="submit" class="btn-pagina"><span class="material-icons">
+                        restaurant_menu
+                    </span>Cardápio</button>
+            </form>
+            <form action="/pedidos" method="POST">
+                <button type="submit" class="btn-menu"><span class="material-icons">
+                        shopping_cart
+                    </span>Pedidos</button>
+            </form>
+            <form action="/voltar" method="POST">
+                <button type="submit" class="btn-menu"><span class="material-icons">
+                        home
+                    </span>Voltar</button>
+            </form>
+        </div>
+        <div class="container-cardapio">
+            <ul class="cardapio">
+                <!-- Loop through orders -->
+                <% for(var i=0; i < menu.length; i++) {%>
+
+                    <li class="cardapio-prato">
+                        <!-- Output name from the iterated order object (MUST BE EQUAL MONGO ATTRIBUTES)-->
+                        <span>
+                            <%= menu[i].name %>
+                        </span>
+                    </li>
+                    <li class="cardapio-lista">
+                        <img src="<%= menu[i].image %>" />
+                    </li>
+                    <li class="cardapio-item">
+                        <span>Descrição: <%= menu[i].description %></span>
+                    </li>
+                    <li class="cardapio-item">
+                        <span>Preço: <%= menu[i].price %></span>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+        <div>
+            <h2> Faça seu pedido </h2>
+            <form action="/orders" method="POST">
+                <label for="mesa">Mesa</label>
+                <input type="number" placeholder="mesa" id="mesa" name="mesa" />
+                <label for="saladaAntipasto">Salada Antipasto</label>
+                <input type="number" placeholder="quantidade" id="saladaAntipasto" name="saladaAntipasto" />
+                <label for="saladaEspecial"> Salada Especial</label>
+                <input type="number" placeholder="quantidade" id="saladaEspecial" name="saladaEspecial" />
+                <label for="file">Filé Mignon</label>
+                <input type="number" placeholder="quantidade" id="file" name="file" />
+                <label for="lasanha">Lasagna</label>
+                <input type="number" placeholder="quantidade" id="lasanha" name="lasanha" />
+                <label for="spaghetti">Spaghetti</label>
+                <input type="number" placeholder="quantidade" id="spaghetti" name="spaghetti" />
+                <label for="risotoOssobuco">Risoto Milanês Ossobuco</label>
+                <input type="number" placeholder="quantidade" id="risotoOssobuco" name="risotoOssobuco" />
+                <label for="risotoBacalhau">Risoto de Bacalhau</label>
+                <input type="number" placeholder="quantidade" id="risotoBacalhau" name="risotoBacalhau" />
+                <label for="agua">Água sem gás</label>
+                <input type="number" placeholder="quantidade" id="agua" name="agua" />
+                <label for="vinho">Vinho Naturelle Rose Casa Valduga</label>
+                <input type="number" placeholder="quantidade" id="vinho" name="vinho" />
+                <label for="suco">Suco</label>
+                <input type="number" placeholder="quantidade" id="suco" name="suco" />
+                <button type="submit" class="btn-pedido">Fazer Pedido</button>
+            </form>
+        </div>
+    </div>
+    <div class="hero"></div>
+</body>
+
+</html>
